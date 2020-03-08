@@ -2,21 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PageNav from '../PageNav/PageNav';
 
-class MainLayout extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
-  };
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Container from '@material-ui/core/Container';
 
-  render() {
-    const { children } = this.props;
+const MainLayout = ({children}) => (
+  <div style={{ padding: 20 }} className="MainLayout">
+    <AppBar>
+      <Container maxWidth="sm">
+        <Toolbar>
+          <PageNav />
+        </Toolbar>
+      </Container>
+    </AppBar>
+    <Container maxWidth="sm">
+      <Toolbar />
+      {children}
+    </Container>
+  </div>
+);
 
-    return (
-      <div>
-        <PageNav />
-        {children}
-      </div>
-    );
-  }
-}
+MainLayout.propTypes = {
+  children: PropTypes.node,
+};
 
 export default MainLayout;
