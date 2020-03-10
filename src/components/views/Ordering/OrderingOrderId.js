@@ -6,7 +6,8 @@ import Paper from '@material-ui/core/Paper';
 
 const OrderingOrderId = ({ match }) => (
   <div className={styles.component}>
-    <h2>Number Order</h2>
+    <h2>NUMBER ORDER</h2>
+    
     <Container maxWidth="sm">
       <Paper>
         <span style={{ padding: 25 }}>{match.params.id}</span>

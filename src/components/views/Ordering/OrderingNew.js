@@ -5,9 +5,11 @@ import Paper from '@material-ui/core/Paper';
 
 const OrderingNew = () => (
   <div className={styles.component}>
-    <h2>New Order</h2>
+    <h2>NEW</h2>
+
     <Container maxWidth="sm">
       <Paper>
+        <span style={{ padding: 25 }}></span>
       </Paper>
     </Container>
   </div>
